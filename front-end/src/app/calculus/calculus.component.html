@@ -1,0 +1,24 @@
+<div class="calculus">
+  <mat-card>
+    <mat-card-title>
+      求导
+    </mat-card-title>
+    <div class="math-diff">
+      $$ $$
+    </div>
+    <mat-form-field>
+      <input matInput [(ngModel)]="formula_diff" (keyup)="do_diff()" (change)="do_diff()" placeholder="表达式">
+    </mat-form-field>
+  </mat-card>
+  <mat-card>
+    <mat-card-title>
+      积分
+    </mat-card-title>
+    <div class="math-integrate">
+      $$$$
+    </div>
+    <mat-form-field>
+      <input matInput [(ngModel)]="formula_integrate" (keyup)="do_integrate()" (change)="do_integrate()" placeholder="表达式">
+    </mat-form-field>
+  </mat-card>
+</div>

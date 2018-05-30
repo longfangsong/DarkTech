@@ -1,0 +1,9 @@
+<form id="basic-math">
+  <div class="math">
+    $$ $$
+  </div>
+  <mat-form-field>
+    <input matInput [(ngModel)]="formula" (keyup)="do_calculate()" (change)="do_calculate()" placeholder="表达式"
+           name="formula">
+  </mat-form-field>
+</form>
