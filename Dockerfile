@@ -8,6 +8,8 @@ RUN git clone https://github.com/longfangsong/DarkTech.git
 WORKDIR /app/DarkTech
 RUN pip3 install -r requirements.txt -i https://mirrors.shu.edu.cn/pypi/web/simple
 RUN cp ./nginx.conf /etc/nginx/nginx.conf
+RUN mkdir /www
+RUN mkdir /www/html
 RUN cp -r ./front-end/dist/front-end /www/html/front-end
 EXPOSE 80
 
