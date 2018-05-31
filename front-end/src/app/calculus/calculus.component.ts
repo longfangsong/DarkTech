@@ -15,9 +15,6 @@ export class CalculusComponent implements OnInit {
   }
 
   ngOnInit() {
-    // MathJax.Hub.Rerender();
-    // MathJax.Hub.Queue(["Process"]);
-    // MathJax.Hub.Queue(["Text", MathJax.Hub.getAllJax('math-diff')[0], '']);
-    // MathJax.Hub.Queue(["Text", MathJax.Hub.getAllJax('math-integrate')[0], '']);
+    MathJax.Hub.Queue(['Typeset', MathJax.Hub]);
   }
 }
