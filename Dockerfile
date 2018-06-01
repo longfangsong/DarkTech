@@ -6,6 +6,7 @@ RUN git clone https://github.com/longfangsong/DarkTech.git
 WORKDIR /app/DarkTech
 RUN pip3 install -r requirements.txt -i https://mirrors.shu.edu.cn/pypi/web/simple
 RUN cp ./nginx.conf /etc/nginx/nginx.conf && mkdir /www && mkdir /www/html && cp -r ./front-end/dist/front-end /www/html/front-end
+RUN mkdir /run/nginx && touch /run/nginx/nginx.pid
 EXPOSE 80
 
-CMD "hug -f main.py && nginx"
+CMD nohup sh -c ./run.sh
