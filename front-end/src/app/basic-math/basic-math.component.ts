@@ -1,5 +1,5 @@
 import {Component, ElementRef, Input, OnInit, ViewChild} from '@angular/core';
-import {BasicMathService} from "./basic-math.service";
+import {RequestResultServiceService} from "../request-result-service.service";
 
 declare var MathJax: any;
 
@@ -13,7 +13,7 @@ export class BasicMathComponent implements OnInit {
   @Input() formula: String;
   @ViewChild('math') math_output: ElementRef;
 
-  constructor(private service: BasicMathService) {
+  constructor(private service: RequestResultServiceService) {
   }
 
   ngOnInit() {
@@ -21,7 +21,7 @@ export class BasicMathComponent implements OnInit {
   }
 
   do_calculate() {
-    this.service.fetchResult(this.formula).then((result) => {
+    this.service.fetchResult('basic_math/simplify', this.formula).then((result) => {
       let the_element = this.math_output.nativeElement;
       the_element.innerHTML = '$$ ' + result.result + ' $$';
       MathJax.Hub.Queue(['Typeset', MathJax.Hub]);
