@@ -22,6 +22,7 @@ import {BasicMathComponent} from './basic-math/basic-math.component';
 import {FormsModule} from "@angular/forms";
 import {HttpClientModule} from "@angular/common/http";
 import {CalculusComponent} from './calculus/calculus.component';
+import {CalculationDisplayCardComponent} from './calculation-display-card/calculation-display-card.component';
 
 const routes: Routes = [
   {path: 'basic-math', component: BasicMathComponent},
@@ -44,7 +45,8 @@ const routes: Routes = [
     CalculusComponent,
     MatCard,
     MatCardTitle,
-    MatCardContent
+    MatCardContent,
+    CalculationDisplayCardComponent
   ],
   imports: [
     BrowserModule,

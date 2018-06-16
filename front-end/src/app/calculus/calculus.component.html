@@ -1,24 +1,6 @@
-<div class="calculus">
-  <mat-card>
-    <mat-card-title>
-      求导
-    </mat-card-title>
-    <div class="math-diff" #diff_result>
-      $$ $$
-    </div>
-    <mat-form-field>
-      <input matInput [(ngModel)]="formula_diff" (keyup)="do_diff()" (change)="do_diff()" placeholder="表达式">
-    </mat-form-field>
-  </mat-card>
-  <mat-card>
-    <mat-card-title>
-      积分
-    </mat-card-title>
-    <div class="math-integrate" #integrate_result>
-      $$ $$
-    </div>
-    <mat-form-field>
-      <input matInput [(ngModel)]="formula_integrate" (keyup)="do_integrate()" (change)="do_integrate()" placeholder="表达式">
-    </mat-form-field>
-  </mat-card>
-</div>
+<app-calculation-display-card
+  [card_name]="'求导'" [data_url]="'basic_math/diff'">
+</app-calculation-display-card>
+<app-calculation-display-card
+  [card_name]="'积分'" [data_url]="'basic_math/integrate'">
+</app-calculation-display-card>

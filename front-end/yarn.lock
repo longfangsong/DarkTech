@@ -224,6 +224,10 @@
   dependencies:
     "@types/jasmine" "*"
 
+"@types/mathjax@^0.0.34":
+  version "0.0.34"
+  resolved "http://r.cnpmjs.org/@types/mathjax/download/@types/mathjax-0.0.34.tgz#f01c2331ef8dccf7c3eff0c7f01e5a52f77c813f"
+
 "@types/node@^6.0.46":
   version "6.0.111"
   resolved "http://r.cnpmjs.org/@types/node/download/@types/node-6.0.111.tgz#85f880a1bab78d395a5de9bcb5319e73a0c31400"

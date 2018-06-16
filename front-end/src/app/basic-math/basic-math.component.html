@@ -1,9 +1,3 @@
-<form id="basic-math">
-  <div class="math" #math>
-    $$ $$
-  </div>
-  <mat-form-field>
-    <input matInput [(ngModel)]="formula" (keyup)="do_calculate()" (change)="do_calculate()" placeholder="表达式"
-           name="formula">
-  </mat-form-field>
-</form>
+<app-calculation-display-card
+  [card_name]="'基本运算'" [data_url]="'basic_math/simplify'">
+</app-calculation-display-card>

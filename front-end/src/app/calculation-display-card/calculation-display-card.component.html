@@ -1,0 +1,14 @@
+<mat-card>
+  <mat-card-title>
+    {{ card_name }}
+  </mat-card-title>
+  <div class="math" #result>
+    $$ $$
+  </div>
+  <mat-form-field>
+    <input matInput [(ngModel)]="formula"
+           (keyup)="do_calculate()"
+           (change)="do_calculate()"
+           placeholder="表达式">
+  </mat-form-field>
+</mat-card>

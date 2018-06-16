@@ -22,6 +22,7 @@
     "@angular/platform-browser": "^6.0.2",
     "@angular/platform-browser-dynamic": "^6.0.2",
     "@angular/router": "^6.0.3",
+    "@types/mathjax": "^0.0.34",
     "core-js": "^2.5.4",
     "mathjax": "^2.7.4",
     "mathjax-node": "^2.1.0",
